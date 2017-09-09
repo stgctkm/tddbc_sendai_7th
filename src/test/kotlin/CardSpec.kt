@@ -4,7 +4,7 @@ import org.jetbrains.spek.api.dsl.it
 import org.jetbrains.spek.api.dsl.on
 import kotlin.test.*
 
-class CardSpec : Spek({
+class TwoCardsSpec : Spek({
     describe("カード") {
         on("文字列表記") {
             it("「スペードの3」の文字列表記は「3♠」") {
