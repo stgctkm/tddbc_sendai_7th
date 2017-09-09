@@ -9,5 +9,9 @@ class Card(val suit: Suit, val rank: Rank) {
         return suit == other.suit
     }
 
+    infix fun hasSameRank(other : Card) : Boolean {
+        return rank == other.rank
+    }
+
 
 }

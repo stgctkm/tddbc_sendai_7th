@@ -26,11 +26,24 @@ class CardSpec: Spek({
             val threeOfSpades = Card(Suit.SPADE, Rank.THREE)
             val aceOfSpades = Card(Suit.SPADE, Rank.ACE)
             val aceOfHearts = Card(Suit.HEART, Rank.ACE)
+
             it ("スペードの3とスペードのAは同じスートを持つ") {
                 assertTrue(threeOfSpades hasSameSuit aceOfSpades)
             }
             it ("スペードの3とハートのAは異なるスートを持つ") {
                 assertFalse (threeOfSpades hasSameSuit aceOfHearts)
+            }
+        }
+        on("同じランクか否かを返す") {
+            val threeOfSpades = Card(Suit.SPADE, Rank.THREE)
+            val aceOfSpades = Card(Suit.SPADE, Rank.ACE)
+            val aceOfHearts = Card(Suit.HEART, Rank.ACE)
+
+            it ("スペードの3とスペードのAは異なるランクを持つ") {
+                assertFalse(threeOfSpades hasSameRank aceOfSpades)
+            }
+            it ("スペードのAとハートのAは同じランクを持つ") {
+                assertTrue(aceOfSpades hasSameRank aceOfHearts)
             }
         }
 
