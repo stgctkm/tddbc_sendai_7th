@@ -10,10 +10,18 @@ import kotlin.test.assertNotNull
 class CardSpec: Spek({
     describe("a card") {
         on("クラス") {
-            it("があること") {
-                assertNotNull(Card())
+            it("が引数suitとrankをとる") {
+                assertNotNull(Card(Suit.SPADE, 3))
             }
         }
 
+        on("文字列表記") {
+            it("「スペードの3」の文字列表記は「3♠」") {
+                assertEquals(Card(Suit.SPADE, 3).getNotation(), "3♠")
+            }
+            it("「ハートのJ」の文字列表記は「J♥」") {
+                assertEquals(Card(Suit.HEART, 11).getNotation(), "J♥")
+            }
+        }
     }
 })
