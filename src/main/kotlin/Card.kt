@@ -1,5 +1,5 @@
 
-class Card(val suit: Suit, val rank: Rank) {
+class Card(val rank: Rank, val suit: Suit) {
 
     fun getNotation(): String {
        return rank.getNotaion()+ suit.getNotation()
