@@ -12,5 +12,7 @@ enum class Rank(val rank : String) {
     TEN("10"),
     JACK("J"),
     QUEEN("Q"),
-    KING("K")
+    KING("K");
+
+    fun getNotaion() = rank
 }
